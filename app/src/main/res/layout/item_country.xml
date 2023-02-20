@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="#151522"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flag_card"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="14dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/number_tv"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/flag_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:fontFamily="@font/quicksand_semi_bold"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color_gray_dark"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/progress_bar"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@id/flag_card"
+        app:layout_constraintTop_toTopOf="@id/progress_bar" />
+
+
+    <TextView
+        android:id="@+id/confirmed_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="#CC263238"
+        app:layout_constraintTop_toBottomOf="@id/name_tv"
+        app:layout_constraintVertical_bias="0.7"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/death_tv"
+        app:layout_constraintEnd_toEndOf="@id/name_tv"
+        app:layout_constraintStart_toStartOf="@id/name_tv" />
+
+    <TextView
+        android:id="@+id/death_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="#CC263238"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@id/name_tv"
+        app:layout_constraintStart_toStartOf="@id/name_tv" />
+
+    <com.jackandphantom.circularprogressbar.CircleProgressbar
+        android:id="@+id/progress_bar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cpb_backgroundProgressColor="#E4E4E4"
+        app:cpb_backgroundProgressWidth="16"
+        app:cpb_foregroundProgressColor="#FF647C"
+        app:cpb_foregroundProgressWidth="16"
+        app:cpb_roundedCorner="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@id/progress_bar"
+        app:layout_constraintStart_toStartOf="@id/progress_bar"
+        app:layout_constraintTop_toTopOf="@id/progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

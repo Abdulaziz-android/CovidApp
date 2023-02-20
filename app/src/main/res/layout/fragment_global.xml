@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.statistics.pages.GlobalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chart_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toStartOf="@id/pie_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_global_chart" />
+
+        <ProgressBar
+            android:id="@+id/chart_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/gray_normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/chart_rv"
+            app:layout_constraintEnd_toEndOf="@id/chart_rv"
+            app:layout_constraintStart_toStartOf="@id/chart_rv"
+            app:layout_constraintTop_toTopOf="@id/chart_rv" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pie_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/chart_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chart_rv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pie_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/quicksand_semi_bold"
+                    android:maxLines="2"
+                    android:text="@string/ratio_of_recovery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.jackandphantom.circularprogressbar.CircleProgressbar
+                    android:id="@+id/pie_progress_bar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:rotation="80"
+                    app:cpb_backgroundProgressColor="@color/red_light"
+                    app:cpb_backgroundProgressWidth="19"
+                    app:cpb_foregroundProgressColor="@color/green_light"
+                    app:cpb_foregroundProgressWidth="19"
+                    app:cpb_roundedCorner="true"
+                    app:layout_constraintBottom_toTopOf="@id/pie_confirmed_count_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pie_title_tv"/>
+
+                <TextView
+                    android:id="@+id/pie_percent_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/pie_progress_bar"
+                    app:layout_constraintEnd_toEndOf="@id/pie_progress_bar"
+                    app:layout_constraintStart_toStartOf="@id/pie_progress_bar"
+                    app:layout_constraintTop_toTopOf="@id/pie_progress_bar" />
+
+                <TextView
+                    android:id="@+id/pie_confirmed_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/_0"
+                    app:drawableStartCompat="@drawable/dot_color"
+                    app:layout_constraintBottom_toTopOf="@id/pie_confirmed_text_tv"
+                    app:layout_constraintStart_toStartOf="@id/pie_confirmed_text_tv" />
+
+                <TextView
+                    android:id="@+id/pie_confirmed_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/affected"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/pie_death_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="-4dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/_0"
+                    app:drawableStartCompat="@drawable/dot_color"
+                    app:drawableTint="@color/green_normal"
+                    app:layout_constraintBottom_toTopOf="@id/pie_death_text_tv"
+                    app:layout_constraintEnd_toEndOf="@id/pie_death_text_tv" />
+
+                <TextView
+                    android:id="@+id/pie_death_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/perished"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="SmallSp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/news_card"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chart_rv"
+            app:layout_constraintWidth_percent="0.88">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.zhpan.indicator.IndicatorView
+                    android:id="@+id/indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98"
+                    app:vpi_orientation="horizontal"
+                    app:vpi_slider_checked_color="@color/gray_normal"
+                    app:vpi_slider_normal_color="#C4C4C4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/news_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/gray_normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/news_card"
+            app:layout_constraintEnd_toEndOf="@id/news_card"
+            app:layout_constraintStart_toStartOf="@id/news_card"
+            app:layout_constraintTop_toTopOf="@id/news_card" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rating_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_card"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_percent="0.92">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/top_countries_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_semi_bold"
+                    android:padding="10dp"
+                    android:text="@string/top_countries"
+                    android:textColor="@color/text_color_gray_dark"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rating_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/rating_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/gray_normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rating_card"
+            app:layout_constraintEnd_toEndOf="@id/rating_card"
+            app:layout_constraintStart_toStartOf="@id/rating_card"
+            app:layout_constraintTop_toTopOf="@id/rating_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

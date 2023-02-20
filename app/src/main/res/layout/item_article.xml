@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="20dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_wear_mask"
+            app:layout_constraintHeight_percent="0.44"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_semi_bold"
+            android:maxLines="2"
+            android:paddingEnd="10dp"
+            android:textColor="@color/gray_normal"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/subtitle_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view"
+            app:layout_constraintWidth_percent="0.92" />
+
+        <TextView
+            android:id="@+id/subtitle_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingEnd="6dp"
+            android:textColor="@color/gray_normal"
+            app:layout_constraintBottom_toTopOf="@id/show_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            app:layout_constraintWidth_percent="0.92" />
+
+        <LinearLayout
+            android:id="@+id/show_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/read_more_btn"
+            app:layout_constraintStart_toStartOf="@id/subtitle_tv"
+            app:layout_constraintTop_toTopOf="@id/read_more_btn"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_show_eye"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/show_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_semi_bold"
+                android:paddingStart="4dp"
+                android:paddingBottom="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comment_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/show_layout"
+            app:layout_constraintStart_toEndOf="@id/show_layout"
+            app:layout_constraintTop_toTopOf="@id/show_layout"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:src="@drawable/ic_comment_plus"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/comment_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_semi_bold"
+                android:paddingStart="4dp"
+                android:paddingBottom="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/like_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/show_layout"
+            app:layout_constraintStart_toEndOf="@id/comment_layout"
+            app:layout_constraintTop_toTopOf="@id/show_layout"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heart_fill"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/like_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_semi_bold"
+                android:paddingStart="4dp"
+                android:paddingBottom="4dp" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/read_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/read_more"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/like_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/title_tv"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

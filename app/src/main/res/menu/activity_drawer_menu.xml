@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_bar_chart_square"
+            android:title="@string/menu_statistic" />
+        <item
+            android:id="@+id/nav_symptoms"
+            android:icon="@drawable/ic_add_to_queue"
+            android:title="@string/menu_symptoms" />
+        <item
+            android:id="@+id/nav_prevention"
+            android:icon="@drawable/ic_select_multiple"
+            android:title="@string/menu_prevention" />
+        <item
+            android:id="@+id/nav_article"
+            android:icon="@drawable/ic_bar_left"
+            android:title="@string/menu_article" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_add_to_queue"
+            android:title="@string/menu_news" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_circle_outline"
+            android:title="@string/menu_help" />
+    </group>
+</menu>

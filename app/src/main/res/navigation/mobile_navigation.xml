@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.abdulaziz.covidapp.ui.view.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.abdulaziz.covidapp.ui.view.statistics.StatisticsFragment"
+        android:label="@string/menu_statistic"
+        tools:layout="@layout/fragment_statistics" />
+
+    <fragment
+        android:id="@+id/nav_symptoms"
+        android:name="com.abdulaziz.covidapp.ui.view.symptoms.SymptomsFragment"
+        android:label="@string/menu_symptoms"
+        tools:layout="@layout/fragment_symptoms" />
+
+    <fragment
+        android:id="@+id/nav_prevention"
+        android:name="com.abdulaziz.covidapp.ui.view.prevention.PreventionFragment"
+        android:label="@string/menu_prevention"
+        tools:layout="@layout/fragment_prevention" />
+
+    <fragment
+        android:id="@+id/nav_article"
+        android:name="com.abdulaziz.covidapp.ui.view.article.ArticleFragment"
+        android:label="@string/menu_article"
+        tools:layout="@layout/fragment_article" />
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.abdulaziz.covidapp.ui.view.news.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.abdulaziz.covidapp.ui.view.help.HelpFragment"
+        android:label="@string/menu_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/nav_show"
+        android:name="com.abdulaziz.covidapp.ui.view.show.ShowFragment"
+        android:label="@string/label_show"
+        tools:layout="@layout/fragment_show" />
+</navigation>

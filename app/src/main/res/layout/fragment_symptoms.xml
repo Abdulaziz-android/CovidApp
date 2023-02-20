@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.symptoms.SymptomsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="-22dp"
+        app:cardBackgroundColor="@color/gray_normal"
+        app:cardCornerRadius="22dp" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="20dp">
+
+            <ImageView
+                android:id="@+id/medicine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/im_undraw_medicine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sneezing_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/medicine_iv"
+                app:layout_constraintWidth_percent="0.88">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sneezing_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/im_sneezing"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/sneezing_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingEnd="10dp"
+                        android:text="@string/sneezing"
+                        android:textColor="#222222"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.15"
+                        app:layout_constraintStart_toEndOf="@id/sneezing_iv"
+                        app:layout_constraintTop_toTopOf="@id/sneezing_iv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/sneezing_subtitle_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:text="@string/lorem_ipsum"
+                        android:textColor="@color/text_color_gray_dark"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.15"
+                        app:layout_constraintStart_toStartOf="@id/sneezing_tv"
+                        app:layout_constraintTop_toBottomOf="@id/sneezing_tv"
+                        tools:ignore="RtlSymmetry" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/sneezing_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        app:dividerColor="@color/gray_very_light"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/sneezing_tv"
+                        app:layout_constraintTop_toBottomOf="@id/sneezing_subtitle_tv" />
+
+                    <TextView
+                        android:paddingVertical="4dp"
+                        android:id="@+id/more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/read_more"
+                        android:textColor="@color/green_normal"
+                        app:layout_constraintBottom_toTopOf="@id/sneezing_discuss_tv"
+                        app:layout_constraintStart_toStartOf="@id/sneezing_tv"
+                        app:layout_constraintTop_toBottomOf="@id/sneezing_divider" />
+
+
+                    <TextView
+                        android:id="@+id/sneezing_discuss_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_semi_bold"
+                        android:text="@string/_100_discussion"
+                        android:textColor="@color/text_color_gray_dark"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="@id/sneezing_iv"
+                        app:layout_constraintStart_toStartOf="@id/sneezing_tv"
+                        tools:ignore="SmallSp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dry_cough_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="@id/sneezing_card"
+                app:layout_constraintTop_toBottomOf="@id/sneezing_card"
+                app:layout_constraintWidth_percent="0.4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/im_dry_cough"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/dry_cough"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="6dp"
+                        android:text="@string/_100_discussion"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fever_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@id/sneezing_card"
+                app:layout_constraintTop_toBottomOf="@id/sneezing_card"
+                app:layout_constraintWidth_percent="0.4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/im_fever"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/fever"
+                        android:textColor="#222222"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="6dp"
+                        android:text="@string/_100_discussion"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

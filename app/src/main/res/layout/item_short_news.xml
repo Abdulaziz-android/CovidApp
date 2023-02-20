@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_card"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:cardBackgroundColor="@color/gray_normal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/desc_tv"
+        app:layout_constraintStart_toEndOf="@id/image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7">
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/uzbekistan_news"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:textColor="@color/gray_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/content_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/quicksand_semi_bold"
+        android:gravity="top"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:text="@string/read_more_lower_case"
+        android:textAllCaps="false"
+        android:textColor="@color/red_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/content_card"
+        app:layout_constraintTop_toBottomOf="@id/desc_tv"
+        app:layout_constraintVertical_bias="0.16"
+        app:drawableRightCompat="@drawable/ic_more_right_red"
+        tools:ignore="RtlSymmetry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

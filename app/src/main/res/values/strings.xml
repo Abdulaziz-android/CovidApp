@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Covid-19</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="welcome_title">CoronaVirus</string>
+    <string name="nav_header_title">CoronaVirus</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_statistic">Statistics</string>
+    <string name="menu_symptoms">Symptoms</string>
+    <string name="menu_prevention">Prevention</string>
+    <string name="menu_article">Article</string>
+    <string name="menu_news">News</string>
+    <string name="menu_help">Help</string>
+    <string name="label_show">Show</string>
+
+    <string name="welcome_title_1">Wear a Mask</string>
+    <string name="welcome_title_2">Hand Wash &amp; Sanitize</string>
+    <string name="welcome_title_3">Physical Distancing</string>
+
+    <string name="welcome_subtitle_1">Masks should be used as part of a comprehensive strategy of measures to suppress transmission and save lives.</string>
+    <string name="welcome_subtitle_2">Hands are the main pathways of germ transmission during health care.</string>
+    <string name="welcome_subtitle_3">Physical distancing helps limit the spread of COVID-19 – this means we keep a distance of at least 1m from each other and avoid spending time in crowded places or in groups</string>
+    <string name="are_you_feeling_sick">Are you feeling sick?</string>
+    <string name="call_now">Call Now</string>
+    <string name="send_sms">Send sms</string>
+    <string name="home_subtitle">If you feel sick with any of covid-19 symptoms please call or message us immediately for help.</string>
+
+    <string name="prevention_title_1">Use mask</string>
+    <string name="prevention_title_2">Wash your hands</string>
+    <string name="prevention_title_3">Avoid close contact</string>
+    <string name="prevention_title_4">Avoid depression</string>
+    <string name="prevention_title_5">Be physically active</string>
+
+    <string name="prevention_subtitle_1">Masks should be used as part of a comprehensive strategy of measures to suppress transmission and save lives</string>
+    <string name="prevention_subtitle_2">Hands are the main pathways of germ transmission during health care</string>
+    <string name="prevention_subtitle_3">Stay 6 feet away from others</string>
+    <string name="prevention_subtitle_4">As more people self-isolate to reduce the spread of COVID-19, an expert offers tips on how to prevent depression during the crisis.</string>
+    <string name="prevention_subtitle_5">Regular physical activity benefits both the body and mind.</string>
+
+    <string name="prevention_description_1">Here are the basics of how to wear a mask:\n\nClean your hands before you put your mask on, as well as before and after you take it off, and after you touch it at any time.\nMake sure it covers both your nose, mouth and chin.\nWhen you take off a mask, store it in a clean plastic bag, and every day either wash it if it’s a fabric mask, or dispose of a medical mask in a trash bin.\nDon’t use masks with valves.</string>
+    <string name="prevention_description_2">Clean your hands by rubbing them with an alcohol-based formulation, as the preferred mean for routine hygienic hand antisepsis if hands are not visibly soiled. It is faster, more effective, and better tolerated by your hands than washing with soap and water.\n\nWash your hands with soap and water when hands are visibly dirty or visibly soiled with blood or other body fluids or after using the toilet.
+\n\nIf exposure to potential spore-forming pathogens is strongly suspected or proven, including outbreaks of Clostridium difficile, hand washing with soap and water is the preferred means.</string>
+    <string name="prevention_description_3">Inside your home: Avoid close contact with people who are sick, if possible. If possible, maintain 6 feet between the person who is sick and other household members. If you are taking care of someone who is sick, make sure you properly wear a well-fitting mask and follow other steps to protect yourself.\n\nIndoors in public: If you are not up to date on COVID-19 vaccines, stay at least 6 feet away from other people, especially if you are at higher risk of getting very sick with COVID-19.</string>
+    <string name="prevention_description_4">The outbreak of the new coronavirus has affected many areas of daily life, including mental health. With the sudden disruption of our routines and the new norm of social distancing, life as we knew it has dramatically transformed in a matter of weeks. Suddenly, many of us are facing the stress of the news—and its impact on our finances—alone, putting us at risk for depression during the coronavirus outbreak.
+        \n\nThis may sound impossible during a difficult time, but rather than think, “This is the rest of my life,” take it day by day or week by week. Take a step back and see there is reason to be hopeful. For example, in Wuhan Province in China, where the outbreak began, the reported number of new cases has dropped significantly and on some days has been zero, thanks to quarantining measures. Stores and factories are beginning to reopen. By seeing solutions that worked for those communities and continuing to take serious precautions, we are increasing the chances that the future is not as hopeless or extreme as we fear.
+</string>
+    <string name="prevention_description_5">It can reduce high blood pressure, help manage weight and reduce the risk of heart disease, stroke, type 2 diabetes, and various cancers - all conditions that can increase susceptibility to COVID-19.
+        \n\nIt also improves bone and muscle strength and increases balance, flexibility and fitness. For older people, activities that improve balance help to prevent falls and injuries.\n\nRegular physical activity can help give our days a routine and be a way to stay in contact with family and friends. It’s also good for our mental health - reducing the risk of depression, cognitive decline and delay the onset of dementia - and improve overall feelings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news">News</string>
+    <string name="article">Article</string>
+    <string name="prevention">Prevention</string>
+    <string name="next_update">in the next update!</string>
+    <string name="read_more">Read More</string>
+    <string name="uzbekistan_news">Uzbekistan News</string>
+    <string name="read_more_lower_case">read more</string>
+    <string name="uzb">uzb</string>
+    <string name="get_started">get started</string>
+    <string name="total_statistics">Total Statistics</string>
+    <string name="ratio_of_recovery">Ratio of Recovery</string>
+    <string name="_0">0 +</string>
+    <string name="affected">Affected</string>
+    <string name="perished">Perished</string>
+    <string name="top_countries">Top Countries</string>
+    <string name="sneezing">Sneezing</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq</string>
+    <string name="_100_discussion">(100) Discussion</string>
+    <string name="dry_cough">Dry Cough</string>
+    <string name="fever">Fever</string>
+
+
+</resources>
